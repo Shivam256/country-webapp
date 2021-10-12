@@ -1,38 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap");
+
+:root {
+  --selected-background-color: var(--dark-background);
+  --selected-content-background: var(--dark-content-background);
+  --selected-text-color-primary: var(--dark-text-color-primary);
+
+  --dark-background: #0f0e12;
+  --dark-content-background: #000;
+  --dark-text-color-primary: #fff;
+  --dark-background-light:#0F0E12;
+}
+
+* {
+  min-height: 0;
+  min-width: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus{
+  outline: none;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background-color: var(--selected-background-color);
+
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App .country-section {
+  width: 100%;
+  height: 90%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App .country-section .country-data {
+  height: 90%;
+  width: 70%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+
+
+.App .country-data .country-list {
+  height: 75%;
+  width: 100%;
+  background-color: var(--selected-content-background);
+  color: var(--selected-text-color-primary);
+  padding-top: 10px;
+  overflow: hidden;
+}
+.country-list .header-grid {
+  border-bottom: 0.569444px solid rgba(189, 189, 189, 0.6);;
+}
+.country-list .MuiGrid-root .country-list-headers{
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.country-data .country-list-inner{
+  height: 100%;
+  width: 100%;
+}
+
+.country-list .counties-container{
+  height: 90%;
+  width: 100%;
+  /* background-color: red; */
+  max-height: 90%;
+  overflow-y: scroll;
+
+}
+
+.counties-container::-webkit-scrollbar{
+  width: 10px;
+}
+.counties-container::-webkit-scrollbar-track{
+  background-color: var(--selected-content-background);
+}
+
+.counties-container::-webkit-scrollbar-thumb{
+  background-color: var(--selected-background-color);
+  border-radius: 5px;
+  /* background-color: #0094ff73; */
+}
+
+
+.counties-container .loader{
+  margin-top: 100px;
+}
+@media screen and (max-width: 800px) {
+  .App .country-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App .country-section .MuiButton-root {
+    align-self: flex-start;
   }
+  .App .country-section .country-data {
+    height: 85%;
+    width: 100%;
+  }
+
+  .App .country-data .country-list{
+    max-width: 100%;
+    /* overflow: auto; */
+    overflow-x: scroll;
+  }
+
+  .App .country-data .country-list::-webkit-scrollbar{
+    display: none;
+  }
+
+
+
+  .country-list-inner{
+    /* background-color: red; */
+    min-width: 180%;
+
+  }
+  
+  
+
 }

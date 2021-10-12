@@ -1,0 +1,73 @@
+.input-dropdown{
+   position: absolute;
+   width: 40%;
+   height: fit-content;
+   max-height: 40vh;
+   background-color: #fff;
+   /* top: 31%;
+   t */
+   top: 21%;
+   /* background-color: ; */
+
+   overflow-y: scroll;
+   border-radius: 5px;
+}
+
+.input-dropdown::-webkit-scrollbar{
+    display: none;
+}
+
+.input-dropdown .dropdown-item{
+    color:#000;
+    font-weight: 400;
+    font-size: 0.7em;
+    font-family: 'Red Hat Text', sans-serif;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 10px;
+    cursor: pointer;
+    /* border-bottom: 1px soli
+    
+    d red; */
+}
+
+
+.dropdown-item img{
+    height: 25px;
+    width: 45px;
+    margin-right: 10px;
+}
+
+
+@media screen and (max-width: 800px){
+    .input-dropdown{
+        top: 21%;
+        width: 50%;
+    }
+
+    .input-dropdown .dropdown-item{
+        font-size: 0.6em;
+    }
+    .dropdown-item img{
+        height: 20px;
+        width: 40px;
+        margin-right: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 500px){
+    .input-dropdown{
+        top: 21%;
+        width: 80%;
+    }
+}
+
+/* position: relative;
+z-index: 9999;
+width: 50%;
+top: 30%;
+min-height: 100px;
+background-color: red; */

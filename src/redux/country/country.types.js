@@ -1,0 +1,7 @@
+const CountryActionTypes = {
+    SET_CURRENT_COUNTRIES:'SET_CURRENT_COUNTRIES',
+    SET_SELECTED_COUNTRY:'SET_SELECTED_COUNTRY',
+    SET_COUNTRY_FILTERS:'SET_COUNTRY_FILTERS'
+}
+
+export default CountryActionTypes;

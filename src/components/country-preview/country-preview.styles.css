@@ -1,0 +1,25 @@
+.country-preview{
+    width: 100%;
+    height: fit-content;
+    /* background-color:green; */
+    margin: 5px auto;
+    padding: 10px 0;
+}
+
+.country-preview .country-name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+.country-preview .country-name img{
+    width: 25px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.country-preview-selected{
+    background-color: rgb(24, 164, 245);
+}

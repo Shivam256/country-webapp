@@ -83,7 +83,7 @@ const allCountries = getCountryData();
 export const filterCountries = (filterOptions) => {
   let countries = [...allCountries];
   // console.log("i am called!");
-  console.log(filterOptions);
+  // console.log(filterOptions);
   const latestFilters = [];
 
   const optionsMap = {
@@ -108,7 +108,7 @@ export const filterCountries = (filterOptions) => {
           country[filterOption.name.toLowerCase()] === filterOption.value
       );
     }else{
-        console.log(filterOption.value);
+        // console.log(filterOption.value);
         let [minPop,maxPop] = populationMap[filterOption.value];
         // console.log("here",minPop,maxPop);
 

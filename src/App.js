@@ -33,7 +33,7 @@ const App = ({ setCurrentCountries, currentCountries, selectedCountry }) => {
     setCountries(getCountryData());
     setCurrentCountries(getCountryData());
 
-    console.log(width);
+    // console.log(width);
     if (width < 800) {
       setDevice("mobile");
     }
@@ -41,7 +41,7 @@ const App = ({ setCurrentCountries, currentCountries, selectedCountry }) => {
 
   useEffect(() => {
     setCountries(currentCountries);
-    console.log("i am rendered");
+    // console.log("i am rendered");
   }, [currentCountries]);
 
   useEffect(() => {

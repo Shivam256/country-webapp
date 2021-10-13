@@ -27,11 +27,6 @@ const countryReducer = (state = INITIAL_STATE, action) => {
         countryFilters:[...state.countryFilters,action.payload],
         currentCountries:filterCountries([...state.countryFilters,action.payload])
       }  
-    case CountryActionTypes.SET_SELECTED_COUNTRY:
-      return {
-        ...state,
-        selectedCountry:action.payload
-      }  
     default:
       return state;
   }
